@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CalculatorContext } from '../Context/CalculatorContext';
 
-const Button = ({number, handleClickNumber}) => {
+const Button = ({number}) => {
+    const [numberDisplayed,handleClickNumber] = useContext(CalculatorContext);
     return (
-        <div>
-            <button onClick={()=>handleClickNumber(number)}>{number}</button>
-        </div>
+        <button onClick={()=>handleClickNumber(number)}>{number}</button>
+        
     );
 };
 
