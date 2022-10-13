@@ -35,6 +35,7 @@ const Operator = ({operator, action}) => {
             case 'minus' : 
                 if (previousNumber.current === " "){
                     previousNumber.current = numberDisplayed;
+                    sign.current = action.type;
                     console.log(previousNumber,"prev");
                     state = parseInt(numberDisplayed);
                     return state;
